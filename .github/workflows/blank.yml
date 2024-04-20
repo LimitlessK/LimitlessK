@@ -1,0 +1,93 @@
+import java.util.Scanner;
+
+public class MathQuiz {
+    
+    public static void main(String[] args) {
+        int correctAnswers = 0;
+        
+        System.out.println("Hey students, be ready for your quiz");
+        System.out.println("Remember the BODMAS rule while answering the questions");
+        System.out.println("Choose the letter that corresponds to your answer.\n");
+        
+        // 1st question
+        System.out.println("Question 1: 5x5 =");
+        System.out.println("A. 25");
+        System.out.println("B. 30");
+        System.out.println("C. 15");
+        System.out.println("D. 50");
+        char answer1 = getUserInput("Enter your answer in letter (Use capital letter)");
+        switch (answer1) {
+            case 'A':
+                correctAnswers++;
+                break;
+        }
+        System.out.println();
+        
+        // 2nd question
+        System.out.println("Question 2: 5x5+5 =");
+        System.out.println("A. 25");
+        System.out.println("B. 30");
+        System.out.println("C. 15");
+        System.out.println("D. 50");
+        char answer2 = getUserInput("Enter your answer in letter (Use capital letter)");
+        switch (answer2) {
+            case 'B':
+                correctAnswers++;
+                break;
+        }
+        System.out.println();
+        
+        // 3rd question
+        System.out.println("Question 3: 5+5x2 =");
+        System.out.println("A. 25");
+        System.out.println("B. 30");
+        System.out.println("C. 15");
+        System.out.println("D. 50");
+        char answer3 = getUserInput("Enter your answer in letter (Use capital letter)");
+        switch (answer3) {
+            case 'C':
+                correctAnswers++;
+                break;
+        }
+        System.out.println();
+        
+        // 4th question
+        System.out.println("Question 4: 5x(5+2) =");
+        System.out.println("A. 25");
+        System.out.println("B. 30");
+        System.out.println("C. 15");
+        System.out.println("D. 35");
+        char answer4 = getUserInput("Enter your answer in letter (Use capital letter)");
+        switch (answer4) {
+            case 'D':
+                correctAnswers++;
+                break;
+        }
+        System.out.println();
+        
+        // 5th question
+        System.out.println("Question 5: 5x5 =");
+        System.out.println("A. 25");
+        System.out.println("B. 30");
+        System.out.println("C. 0");
+        System.out.println("D. 50");
+        char answer5 = getUserInput("Enter your answer in letter (Use capital letter)");
+        switch (answer5) {
+            case 'C':
+                correctAnswers++;
+                break;
+        }
+        System.out.println();
+        
+        // Calculate and display result
+        double result = ((double) correctAnswers / 5) * 100;
+        System.out.println("You answered " + correctAnswers + " out of the five questions.");
+        System.out.println("And you scored " + result + "% out of 100%.");
+    }
+    
+    private static char getUserInput(String message) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print(message + ": ");
+        return scanner.next().charAt(0);
+    }
+}
